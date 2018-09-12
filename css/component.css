@@ -1,15 +1,23 @@
 /* Icons (made with Icomoon.io) */
-
+/* 
 @font-face {
 	font-family: 'feather';
 	font-weight: normal;
 	font-style: normal;
 	src: url('../fonts/feather/feather.eot?1gafuo');
 	src: url('../fonts/feather/feather.eot?1gafuo#iefix') format('embedded-opentype'), url('../fonts/feather/feather.woff2?1gafuo') format('woff2'), url('../fonts/feather/feather.ttf?1gafuo') format('truetype'), url('../fonts/feather/feather.woff?1gafuo') format('woff'), url('../fonts/feather/feather.svg?1gafuo#feather') format('svg');
+} */
+
+@font-face {
+	font-family: 'FASolid';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../font/fa-solid-900.eot');
+	src: url('../font/fa-solid-900.eot') format('embedded-opentype'), url('../font/fa-solid-900.woff') format('woff'), url('../font/fa-solid-900.ttf') format('truetype'), url('../fonts/FASolid/FASolid.svg#FASolid') format('svg');
 }
 
 .icon {
-	font-family: 'feather';
+	font-family: 'FASolid';
 	font-weight: normal;
 	font-style: normal;
 	font-variant: normal;
@@ -22,15 +30,15 @@
 }
 
 .icon--arrow-left:before {
-	content: '\e901';
+	content: '\f0a9';
 }
 
 .icon--menu:before {
-	content: '\e903';
+	content: '\f0a9';
 }
 
 .icon--cross:before {
-	content: '\e117';
+	content: '\f0a9';
 }
 
 
@@ -91,8 +99,8 @@
 }
 
 .menu__link[data-submenu]::after {
-	content: '\e904';
-	font-family: 'feather';
+	content: '\f105';
+	font-family: 'FASolid';
 	position: absolute;
 	right: 0;
 	padding: 0.25em 1.25em;
@@ -107,7 +115,7 @@
 }
 
 .menu__link--current::before {
-	content: '\00B7';
+	content: '\f0a9';
 	font-size: 1.5em;
 	line-height: 0;
 	position: absolute;
@@ -253,8 +261,8 @@
 }
 
 .menu__breadcrumbs a:not(:last-child)::after {
-	content: '\e902';
-	font-family: 'feather';
+	content: '\f105';
+	font-family: 'FASolid';
 	display: inline-block;
 	padding: 0 0.5em;
 	color: #33353e;

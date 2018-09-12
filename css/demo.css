@@ -35,8 +35,9 @@ body {
 	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
 	overflow: hidden;
 	margin: 0;
-	color: #cecece;
-	background: #2a2b30;
+	color: #fff;
+	background: #35373d;
+	/*  background: #404048; */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -181,7 +182,7 @@ a:hover {
 }
 
 .ntd-icon--next:after {
-	content: '\e000';
+	content: '\f0a9';
 }
 
 .ntd-icon--home:after {
@@ -193,11 +194,11 @@ a:hover {
 }
 
 .ntd-icon--about:after {
-	content: '\e003';
+	content: '\f0a9';
 }
 
 .ntd-icon--prev:after {
-	content: '\f060';
+	content: '\f0a9';
 }
 
 .dummy-logo {
@@ -232,26 +233,6 @@ a:hover {
 	background: url(../img/loading.svg) no-repeat 50% 50%;
 }
 
-.products {
-	margin: 0;
-	padding: 2em;
-	text-align: center;
-}
-
-.product {
-	display: inline-block;
-	width: 200px;
-	height: 200px;
-	margin: 10px;
-	border-radius: 5px;
-	background: #1c1d22;
-}
-
-.product .foodicon {
-	font-size: 4em;
-	line-height: 190px;
-	color: #3b3d4a;
-}
 
 .info {
 	font-size: 1.1em;
