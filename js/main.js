@@ -51,13 +51,13 @@ $(document).ready(function () {
         cursorcolor: "#424242", // change cursor color in hex
         cursoropacitymin: 0, // change opacity when cursor is inactive (scrollabar "hidden" state), range from 1 to 0
         cursoropacitymax: 1, // change opacity when cursor is active (scrollabar "visible" state), range from 1 to 0
-        cursorwidth: "50px", // cursor width in pixel (you can also write "5px")
-        cursorborder: "10px solid #fff", // css definition for cursor border
-        cursorborderradius: "50px", // border radius in pixel for cursor
+        cursorwidth: "7px", // cursor width in pixel (you can also write "5px")
+        cursorborder: "0px solid #fff", // css definition for cursor border
+        cursorborderradius: "3px", // border radius in pixel for cursor
     
         autohidemode: true, // how hide the scrollbar works, possible values: 
+        //background:"grey",
              
-        background: "tomato", // change css for rail background
     });
     // Scrollbar for menu tabs
     $(".tab-content").niceScroll({

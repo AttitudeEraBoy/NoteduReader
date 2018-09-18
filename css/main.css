@@ -25,10 +25,10 @@ ul {
     z-index: 1; /* Sit on top */
     left: -20%;
     top: 0;
-    background-color: rgb(15, 15, 35);
 	overflow-x: hidden; /* Disable horizontal scroll */
 	overflow-y: hidden; /* Disable vertical scroll */
-    transition: 0.6s; /* transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+	transition: 0.6s; /* transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+	background: #ffffff;
 }
 
 @media only screen and (max-width: 960px) {
@@ -73,7 +73,6 @@ ul {
 
 /* The text in the summary-box  */
 .menu__summary .summary{
-	color: #0ae702;
 	margin-top: 15px;
 }
 
@@ -85,7 +84,6 @@ ul {
 /* Position the close button (top right corner) */
 .menu .closebtn {
 	text-decoration: none;
-	color: #5611c5;
 	transition: 0.3s; /* Transition effects on hover (color) */
 	position: absolute;
 	z-index: 2;
@@ -96,7 +94,6 @@ ul {
 
 /* When you mouse over the close button, change color */
 .menu .closebtn:hover{
-	color: #6b0e3c;
 }
 
 /* ------------- */
@@ -110,7 +107,6 @@ ul {
 .menu__content a {
     text-decoration: none;
     font-size: 16px;
-    color: #818181;
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
 }
@@ -135,7 +131,7 @@ ul {
 }
 
 .tab-content .tab-pane {
-	background-color: aliceblue;
+	padding: 10px;
 }
 
 
@@ -174,7 +170,7 @@ ul {
 .sidebar__content a {
     text-decoration: none;
     font-size: 16px;
-    color: #ff1100;
+    color: #000;
 	transition-property: color;
 	transition-duration:  0.3s; /* Transition effects on hover (color) */
 }
@@ -191,8 +187,7 @@ ul {
 		height: 80px;
 		left: 0;
 		top: 0;
-		background: #5611c5;
-		border: 3px double #6b0e3c;
+		box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
 	}
 	
 	.sidebar__content ul {
@@ -203,13 +198,13 @@ ul {
 
 /* ---------------- MAIN ---------------- */
 .main {
+	margin: 50px;
 	z-index: -1;
-	background-color: aquamarine;
 }
 
 @media only screen and (max-width: 576px) {
     .main {
-		margin-top: 80px;
+		margin-top: 100px;
 	}
 }
 
