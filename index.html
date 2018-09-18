@@ -6,162 +6,132 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Notedu Reader</title>
-	<meta name="description" content="This is design of Notedu Reader" />
+	<meta name="description" content="This is the design of Notedu Reader" />
 	<meta name="keywords" content="notedu, reader, ders, not, notu, kitap, kitabı" />
 	<meta name="author" content="İren SALTALI" />
-	<link rel="shortcut icon" href="favicon.ico">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- Font Awesome icons -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+	 crossorigin="anonymous">
 	<!-- styles -->
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<script src="js/modernizr-custom.js"></script>
+	<!-- Jquery -->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<!-- Jquery for scrollbar -->
+	<script src="jquery.nicescroll-3.7.6/jquery.nicescroll.js"></script>
+	<script src="js/main.js"></script>
 </head>
 
-<body>
+<body onresize="checkMenu()">
 	<!-- Main container -->
 	<div class="container">
-		<!-- Blueprint header -->
-		<header class="ntd-header cf">
-			<div class="dummy-logo">
-				<div class="dummy-icon foodicon foodicon--coconut"></div>
-				<h2 class="dummy-heading">Notedu Reader</h2>
+		<!-- Menu bar  -->
+		<div class="menu" id="menu">
+			<div class="menu__border">
+				<!-- Summary/Head of Menu -->
+				<div class="menu__summary">
+					<!-- Close Button -->
+					<a href="#" class="closebtn" onclick="closeMenu()">CLOSE</a>
+					<!-- Image -->
+					<img id="cover" src="">
+					<!-- Summary of the book -->
+					<div class="summary">
+						<p>
+							Some summary of the book
+							And another one
+							And another one DJ KHALED
+						</p>
+					</div>
+				</div>
+				<!-- Tabs of Menu -->
+				<div class="menu__content">
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="chapters-tab" data-toggle="tab" href="#chapters" role="tab" aria-controls="home" aria-selected="true">Chapters</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="bookmarks-tab" data-toggle="tab" href="#bookmarks" role="tab" aria-controls="profile" aria-selected="false">Bookmarks</a>
+						</li>
+					</ul>
+				</div>
+				<!-- Tab Contents -->
+				<div class="tab-content" id="menuTabs">
+					<!-- Tab Content 1 -->
+					<div class="tab-pane fade show active" id="chapters" role="tabpanel" aria-labelledby="chapters-tab">Some Chapters contenttrices
+						sagittis, sapien ipsum ornare odio, nec blandit nisi leo et tellus. Nullam varius nulla ut neque aliquet volutpat.
+						Nulla facilisi. Vivamus suscipit mauris nisl, ut posuere mi ultrices in. Cras et tortor sit amet sem suscipit bibendum
+						at quis nunc. Nam auctor libero quis suscipit fringilla. Sed nunc odio, tincidunt ac egestas vitae, bibendum vel ex.
+						Etiam at enim felis. Suspendisse feugiat cursus quam. Suspendisse potenti. Curabitur interdum tristique felis, ac vehicula
+						ante convallis vel. Quisque eu est dignissim, tincidunt nunc volutpat, viverra dolor. Suspendisse mattis neque elit,
+						in consectetur eros pellentesque eget. Donec consequat imperdiet nisl, eu laoreet leo scelerisque ut. Donec rutrum
+						mattis massa laoreet molestie. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+						Nam vitae nibh semper, dapibus arcu eget, porta ex. Nulla scelerisque rutrum ex vitae fringilla. Proin et tortor at
+						dui rhoncus a I WANT TO SEE THIS lots by lots</div>
+						<!-- Tab Content 2 -->
+					<div class="tab-pane fade" id="bookmarks" role="tabpanel" aria-labelledby="bookmarks-tab">Some other Bookmarks content
+						little by little</div>
+				</div>
 			</div>
-			<div class="ntd-header__main">
-				<!-- <span class="ntd-header__present">Moodle For Dummies</span> -->
-				<h1 class="ntd-header__title">Moodle For Dummies</h1>
-				<nav class="ntd-nav">
-					<a class="ntd-nav__item ntd-icon ntd-icon--prev" href="#" data-info="Önceki"><span>Önceki</span></a>
-					<!--a class="ntd-nav__item ntd-icon ntd-icon--next" href="" data-info="next Blueprint"><span>Next Blueprint</span></a-->
-					<a class="ntd-nav__item ntd-icon ntd-icon--home" href="#" data-info="İlk Sayfa"><span>İlk Sayfa</span></a>
-					<a class="ntd-nav__item ntd-icon ntd-icon--next" href="#" data-info="Sonraki"><span>Sonraki</span></a>
-				</nav>
-			</div>
-		</header>
-		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
-		<nav id="ml-menu" class="menu">
-			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
-			<div class="menu__wrap">
-				<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="#">Vegetables</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="#">Fruits</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="#">Grains</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">Mylk &amp; Drinks</a></li>
-				</ul>
-				<!-- Submenu 1 -->
-				<ul data-menu="submenu-1" id="submenu-1" class="menu__level" tabindex="-1" role="menu" aria-label="Vegetables">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Stalk Vegetables</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Roots &amp; Seeds</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Cabbages</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Salad Greens</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Mushrooms</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1-1" aria-owns="submenu-1-1" href="#">Sale %</a></li>
-				</ul>
-				<!-- Submenu 1-1 -->
-				<ul data-menu="submenu-1-1" id="submenu-1-1" class="menu__level" tabindex="-1" role="menu" aria-label="Sale %">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Fair Trade Roots</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Dried Veggies</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Our Brand</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Homemade</a></li>
-				</ul>
-				<!-- Submenu 2 -->
-				<ul data-menu="submenu-2" id="submenu-2" class="menu__level" tabindex="-1" role="menu" aria-label="Fruits">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Citrus Fruits</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Berries</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2-1" aria-owns="submenu-2-1" href="#">Special Selection</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Tropical Fruits</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Melons</a></li>
-				</ul>
-				<!-- Submenu 2-1 -->
-				<ul data-menu="submenu-2-1" id="submenu-2-1" class="menu__level" tabindex="-1" role="menu" aria-label="Special Selection">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Exotic Mixes</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wild Pick</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Vitamin Boosters</a></li>
-				</ul>
-				<!-- Submenu 3 -->
-				<ul data-menu="submenu-3" id="submenu-3" class="menu__level" tabindex="-1" role="menu" aria-label="Grains">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Buckwheat</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Millet</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Quinoa</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wild Rice</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Durum Wheat</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3-1" aria-owns="submenu-3-1" href="#">Promo Packs</a></li>
-				</ul>
-				<!-- Submenu 3-1 -->
-				<ul data-menu="submenu-3-1" id="submenu-3-1" class="menu__level" tabindex="-1" role="menu" aria-label="Promo Packs">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Starter Kit</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">The Essential 8</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Bolivian Secrets</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Flour Packs</a></li>
-				</ul>
-				<!-- Submenu 4 -->
-				<ul data-menu="submenu-4" id="submenu-4" class="menu__level" tabindex="-1" role="menu" aria-label="Mylk &amp; Drinks">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Grain Mylks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Seed Mylks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nut Mylks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nutri Drinks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4-1" aria-owns="submenu-4-1" href="#">Selection</a></li>
-				</ul>
-				<!-- Submenu 4-1 -->
-				<ul data-menu="submenu-4-1" id="submenu-4-1" class="menu__level" tabindex="-1" role="menu" aria-label="Selection">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nut Mylk Packs</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Amino Acid Heaven</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Allergy Free</a></li>
+		</div>
+		<!-- Side bar -->
+		<div class="col-sm-2 col-md-1 sidebar" id="sidebar">
+			<div class="sidebar__content">
+				<ul>
+					<a class="sidebar__link" href="#"><li class="nav__btn" id="uno" onclick="openMenu()">OPEN</li></a>
+					<a class="sidebar__link" href="#"><li class="nav__btn" id="dos">OPEN</li></a>
+					<a class="sidebar__link" href="#"><li class="nav__btn" id="tres">OPEN</li></a>
+					<a class="sidebar__link" href="#"><li class="nav__btn" id="cuatro">OPEN</li></a>
+					<a class="sidebar__link" href="#"><li class="nav__btn" id="cinco">OPEN</li></a>
 				</ul>
 			</div>
-		</nav>
-		<div class="content">
-			<p class="info">Please choose a category</p>
-			<!-- Ajax loaded content here -->
+		</div>
+		<!-- Main text block -->
+		<div class="main col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1">
+			<div class="main__wrap">
+				<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis velit in massa aliquam, vel hendrerit
+					velit scelerisque. Fusce suscipit, urna vitae commodo convallis, lorem sapien tristique metus, non sagittis est lorem
+					at magna. Phasellus scelerisque efficitur justo. Quisque fringilla, felis ac ultrices sagittis, sapien ipsum ornare
+					odio, nec blandit nisi leo et tellus. Nullam varius nulla ut neque aliquet volutpat. Nulla facilisi. Vivamus suscipit
+					mauris nisl, ut posuere mi ultrices in. Cras et tortor sit amet sem suscipit bibendum at quis nunc. Nam auctor libero
+					quis suscipit fringilla. Sed nunc odio, tincidunt ac egestas vitae, bibendum vel ex. Etiam at enim felis. Suspendisse
+					feugiat cursus quam. Suspendisse potenti. Curabitur interdum tristique felis, ac vehicula ante convallis vel. Quisque
+					eu est dignissim, tincidunt nunc volutpat, viverra dolor. Suspendisse mattis neque elit, in consectetur eros pellentesque
+					eget. Donec consequat imperdiet nisl, eu laoreet leo scelerisque ut. Donec rutrum mattis massa laoreet molestie. Orci
+					varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam vitae nibh semper, dapibus arcu
+					eget, porta ex. Nulla scelerisque rutrum ex vitae fringilla. Proin et tortor at dui rhoncus aliquam a sed risus. Sed
+					viverra massa est, nec vehicula felis accumsan a. Mauris non magna enim. Nam eu felis quis nisl facilisis eleifend.
+					Donec quam lacus, convallis quis leo eu, bibendum iaculis magna. Sed ac tristique tortor. Cras placerat, mi id aliquet
+					sollicitudin, augue turpis imperdiet ex, a luctus nisl arcu eget sem. Sed convallis nulla ut justo laoreet interdum.
+					Nam vitae porta lorem. Vivamus interdum pulvinar fermentum. <br/><br/><br/> Lorem ipsum dolor sit amet, consectetur
+					adipiscing elit. Pellentesque iaculis velit in massa aliquam, vel hendrerit velit scelerisque. Fusce suscipit, urna
+					vitae commodo convallis, lorem sapien tristique metus, non sagittis est lorem at magna. Phasellus scelerisque efficitur
+					justo. Quisque fringilla, felis ac ultrices sagittis, sapien ipsum ornare odio, nec blandit nisi leo et tellus. Nullam
+					varius nulla ut neque aliquet volutpat. Nulla facilisi. Vivamus suscipit mauris nisl, ut posuere mi ultrices in. <br/><br/><br/>					Cras
+					et tortor sit amet sem suscipit bibendum at quis nunc. Nam auctor libero quis suscipit fringilla. Sed nunc odio, tincidunt
+					ac egestas vitae, bibendum vel ex. Etiam at enim felis. Suspendisse feugiat cursus quam. Suspendisse potenti. Curabitur
+					interdum tristique felis, ac vehicula ante convallis vel. Quisque eu est dignissim, tincidunt nunc volutpat, viverra
+					dolor. <br/><br/><br/> Suspendisse mattis neque elit, in consectetur eros pellentesque eget. Donec consequat imperdiet
+					nisl, eu laoreet leo scelerisque ut. Donec rutrum mattis massa laoreet molestie. Orci varius natoque penatibus et magnis
+					dis parturient montes, nascetur ridiculus mus. Nam vitae nibh semper, dapibus arcu eget, porta ex. Nulla scelerisque
+					rutrum ex vitae fringilla. Proin et tortor at dui rhoncus aliquam a sed risus. Sed viverra massa est, nec vehicula felis
+					accumsan a. Mauris non magna enim. Nam eu felis quis nisl facilisis eleifend. Donec quam lacus, convallis quis leo eu,
+					bibendum iaculis magna. Sed ac tristique tortor. Cras placerat, mi id aliquet sollicitudin, augue turpis imperdiet ex,
+					a luctus nisl arcu eget sem. Sed convallis nulla ut justo laoreet interdum. Nam vitae porta lorem. Vivamus interdum
+					pulvinar fermentum.
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- /view -->
-	<script src="js/classie.js"></script>
-	<script src="js/dummydata.js"></script>
-	<script src="js/main.js"></script>
-	<script>
-	(function() {
-		var menuEl = document.getElementById('ml-menu'),
-			mlmenu = new MLMenu(menuEl, {
-				// breadcrumbsCtrl : true, // show breadcrumbs
-				// initialBreadcrumb : 'all', // initial breadcrumb text
-				backCtrl : false, // show back button
-				// itemsDelayInterval : 60, // delay between each menu item sliding animation
-				onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
-			});
 
-		// mobile menu toggle
-		var openMenuCtrl = document.querySelector('.action--open'),
-			closeMenuCtrl = document.querySelector('.action--close');
-
-		openMenuCtrl.addEventListener('click', openMenu);
-		closeMenuCtrl.addEventListener('click', closeMenu);
-
-		function openMenu() {
-			classie.add(menuEl, 'menu--open');
-			closeMenuCtrl.focus();
-		}
-
-		function closeMenu() {
-			classie.remove(menuEl, 'menu--open');
-			openMenuCtrl.focus();
-		}
-
-		// simulate grid content loading
-		var gridWrapper = document.querySelector('.content');
-
-		function loadDummyData(ev, itemName) {
-			ev.preventDefault();
-
-			closeMenu();
-			gridWrapper.innerHTML = '';
-			classie.add(gridWrapper, 'content--loading');
-			setTimeout(function() {
-				classie.remove(gridWrapper, 'content--loading');
-				gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
-			}, 700);
-		}
-	})();
-	</script>
+	<!-- Required scripts for Bootstrap -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous"></script>
 </body>
 
 </html>
