@@ -1,9 +1,11 @@
 // MENU FUNCTIONS
 function openMenu() {
     $("#menu").css("left", "0");
+    $("body").toggleClass("dialogIsOpen", true);
 }
 
 function closeMenu() {
+    $("body").toggleClass("dialogIsOpen", false);
     if ($(window).width() >= 960) {
         $("#menu").css("left", "-20%");
     }

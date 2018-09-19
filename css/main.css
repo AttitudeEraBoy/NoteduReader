@@ -202,6 +202,14 @@ ul {
 	z-index: -1;
 }
 
+.dialogIsOpen .main {
+	filter: grayscale(50%);
+	/* Blur and de-color */
+	-webkit-filter: grayscale(50%);
+  
+  }
+
+
 @media only screen and (max-width: 576px) {
     .main {
 		margin-top: 100px;
