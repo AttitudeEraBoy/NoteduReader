@@ -37,7 +37,18 @@ ul {
 		left: -30%;
     }
 }
-
+.box {
+    display:block;
+    width:200px;
+    height:100px;
+	background-color:rgb(250, 19, 19);
+}
+#pop {
+	padding:0px 0px;
+}
+#example {
+    position:relative;
+}
 @media only screen and (max-width: 576px) {
     .menu {
 		width: 80%;
