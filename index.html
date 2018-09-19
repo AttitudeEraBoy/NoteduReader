@@ -10,8 +10,7 @@
 	<meta name="keywords" content="notedu, reader, ders, not, notu, kitap, kitabı" />
 	<meta name="author" content="İren SALTALI" />
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- Font Awesome icons -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
@@ -78,10 +77,11 @@
 		</div>
 		<!-- Side bar -->
 		<div class="col-sm-2 col-md-1 sidebar" id="sidebar">
+				
 			<div class="sidebar__content">
 				<ul>
 					<a class="sidebar__link" href="#"><li class="nav__btn fa fa-bars fa-2x" id="uno" onclick="openMenu()"></li></a>
-					<a class="sidebar__link" href="#"><li class="nav__btn fa fa-box fa-2x" id="dos"></li></a>
+					<a class="sidebar__link" class="pop" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?"><li class="nav__btn fa fa-box fa-2x" id="dos" ></li></a>
 					<a class="sidebar__link" href="#"><li class="nav__btn fa fa-text-height fa-2x" id="tres"></li></a>
 					<a class="sidebar__link" href="#"><li class="nav__btn fa fa-bookmark fa-2x" id="cuatro"></li></a>
 				</ul>
@@ -127,10 +127,8 @@
 	<!-- /view -->
 
 	<!-- Required scripts for Bootstrap -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-	 crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 
 </html>
