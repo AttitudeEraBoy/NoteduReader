@@ -100,11 +100,13 @@ ul {
 	z-index: 2;
     top: 20px;
     right: 45px;
-    font-size: 16px;
+	font-size: 16px;
+	color: #000;
 }
 
 /* When you mouse over the close button, change color */
 .menu .closebtn:hover{
+	color: #777;
 }
 
 /* ------------- */
@@ -120,11 +122,12 @@ ul {
     font-size: 16px;
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
+	color: #000;
 }
 
 /* When you mouse over the tabs, change their color */
 .menu__content a:hover, .menu__content a:focus {
-	color: #ffffff;
+	text-decoration: underline;
 }
 
 /* The Tabs Themselves */
@@ -133,6 +136,7 @@ ul {
 	flex-flow: row nowrap;
 	justify-content: center;
 }
+
 
 /* ------------- */
 /* Content of Tabs */
@@ -188,7 +192,7 @@ ul {
 
 /* When you mouse over the sidebar links, change their color */
 .sidebar__content a:hover, .sidebar__content a:focus {
-    color: #dba4a1;
+    color: #777;
 }
 
 /* On small screen, change position to Top */

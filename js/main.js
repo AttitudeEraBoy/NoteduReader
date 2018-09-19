@@ -67,11 +67,13 @@ $(document).ready(function () {
     
 
     //Popovers
-    $('#dos').popover({
+    $('#font-settings').popover({
         trigger: 'focus',
         html:true,
-        title:'test sdffsadfsa',
-        content:'sdfsfas safas sf',
+        title:'<input type="range" class="custom-range">',
+        content:'<p style="font-family: "Times New Roman", Times, serif !important;">Times New Roman</p>'
+        +'<p style="font-family: "Georgia, serif;">Georgia</p>'+
+        '<p style="font-family: "Helvetica, sans-serif;">Helvetica</p>',
         placement:'right',
         boundary:'window',
         template:'<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
