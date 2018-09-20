@@ -68,7 +68,7 @@ $(document).ready(function () {
 
     //Popovers
     $('#font-settings').popover({
-        trigger: 'focus',
+        trigger: 'click',
         html:true,
         title:'<input type="range" class="custom-range">',
         content:'<p style="font-family: "Times New Roman", Times, serif !important;">Times New Roman</p>'
@@ -76,8 +76,36 @@ $(document).ready(function () {
         '<p style="font-family: "Helvetica, sans-serif;">Helvetica</p>',
         placement:'right',
         boundary:'window',
+        toggleClass:'popover',
         template:'<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
       }); 
+      $(document).click(function (event) {
+        //if you click on anything except the modal itself close the modal
+        if (!$(event.target).closest("#font-settings, .popover").length) {
+            $('#font-settings').popover('hide');
+        }
+    
+    });
+  /*   $('#menu').bind('click',function(){
+        $('#menu').css('background-color','black');
+  });
+  $(function() {
+    $("a").click(function() {
+        $("").wrapInner("<div id='dimmer'></div>");
+        $("#dimmer").hide().css({
+            "height": $(document).height(),
+            "width": "100%",
+            "background-color": "black"
+        }).fadeTo(1000, 0.5);
+    });
+}); */
+$('.sidebar__link').focus(function() {
+    $('body').addClass('is-dimmed').fadeIn(slow);
+  })
+  
+  $('.sidebar__link').focusout(function() {
+    $('body').removeClass('is-dimmed').fadeOut(slow);
+  })
     
 });
 
