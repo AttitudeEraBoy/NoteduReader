@@ -3,8 +3,8 @@ function openMenu() {
     console.log("asdf");
     $("#menu").css("left", "0");
     $("body").toggleClass("dialogIsOpen", true);
-    $('body').addClass('is-dimmed');
-    
+    $('body').addClass('is-dimmed');  
+
 }
 
 function closeMenu() {
@@ -75,10 +75,23 @@ $(document).ready(function () {
     $('#font-settings').popover({
         trigger: 'click',
         html:true,
-        title:'<input type="range" class="custom-range">',
-        content:'<p style="font-family: "Times New Roman", Times, serif !important;">Times New Roman</p>'
+        title:'a<input type="range" class="custom-range">A',
+        content:'<center><p style="font-family: "Times New Roman", Times, serif !important;">Times New Roman</p>'
         +'<p style="font-family: "Georgia, serif;">Georgia</p>'+
-        '<p style="font-family: "Helvetica, sans-serif;">Helvetica</p>',
+        '<p style="font-family: "Helvetica, sans-serif;">Helvetica</p></center>',
+        placement:'right',
+        boundary:'window',
+        toggleClass:'popover',
+        template:'<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+      }); 
+      
+    $('#reader-settings').popover({
+        trigger: 'click',
+        html:true,
+        title:'<input type="range" class="custom-range">',
+        content:'<center><p style="font-family: "Times New Roman", Times, serif !important;">Times New Roman</p>'
+        +'<p style="font-family: "Georgia, serif;">Georgia</p>'+
+        '<p style="font-family: "Helvetica, sans-serif;">Helvetica</p></center>',
         placement:'right',
         boundary:'window',
         toggleClass:'popover',
@@ -88,22 +101,12 @@ $(document).ready(function () {
         //if you click on anything except the modal itself close the modal
         if (!$(event.target).closest("#font-settings, .popover").length) {
             $('#font-settings').popover('hide');
-            
         }
+        if (!$(event.target).closest("#reader-settings, .popover").length) {
+            $('#reader-settings').popover('hide');
+        }
+    });
     
-    });
-  /*   $('#menu').bind('click',function(){
-        $('#menu').css('background-color','black');
-  });
-  $(function() {
-    $("a").click(function() {
-        $("").wrapInner("<div id='dimmer'></div>");
-        $("#dimmer").hide().css({
-            "height": $(document).height(),
-            "width": "100%",
-            "background-color": "black"
-        }).fadeTo(1000, 0.5);
-    });
-}); */
 });
+
 

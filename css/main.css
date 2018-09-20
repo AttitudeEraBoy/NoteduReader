@@ -37,18 +37,7 @@ ul {
 		left: -30%;
     }
 }
-.box {
-    display:block;
-    width:200px;
-    height:100px;
-	background-color:rgb(250, 19, 19);
-}
-#pop {
-	padding:0px 0px;
-}
-#example {
-    position:relative;
-}
+
 @media only screen and (max-width: 576px) {
     .menu {
 		width: 80%;
@@ -148,17 +137,6 @@ ul {
 .tab-content .tab-pane {
 	padding: 10px;
 }
-.search {
-	background: white;
-	height: 100px;
-	display: flex;
-  }
-  
-  .search input {
-	width: 100%;
-	font-size: 3em;
-	z-index: 1;
-  }
   
   .is-dimmed:after {
 	content:'';
@@ -172,6 +150,22 @@ ul {
 
 
 /* ---------------- END MENU ---------------- */
+
+/* ---------------- POPOVER ---------------- */
+
+@media only screen and (max-width: 960px) {
+    .popover {
+		placement: bottom;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .popover {
+		placement: bottom;
+    }
+}
+
+/* ---------------- END POPOVER ---------------- */
 
 /* ---------------- SIDE BAR ---------------- */
 /* Set sidebar as overlay */
