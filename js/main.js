@@ -1,7 +1,10 @@
 // MENU FUNCTIONS
 function openMenu() {
+    console.log("asdf");
     $("#menu").css("left", "0");
     $("body").toggleClass("dialogIsOpen", true);
+    $('body').addClass('is-dimmed');
+    
 }
 
 function closeMenu() {
@@ -15,6 +18,8 @@ function closeMenu() {
     else {
         $("#menu").css("left", "-80%");
     }
+
+    $('body').removeClass('is-dimmed');
 }
 
 function resizeMenu() {
@@ -83,6 +88,7 @@ $(document).ready(function () {
         //if you click on anything except the modal itself close the modal
         if (!$(event.target).closest("#font-settings, .popover").length) {
             $('#font-settings').popover('hide');
+            
         }
     
     });
@@ -99,13 +105,5 @@ $(document).ready(function () {
         }).fadeTo(1000, 0.5);
     });
 }); */
-$('.sidebar__link').focus(function() {
-    $('body').addClass('is-dimmed').fadeIn(slow);
-  })
-  
-  $('.sidebar__link').focusout(function() {
-    $('body').removeClass('is-dimmed').fadeOut(slow);
-  })
-    
 });
 
