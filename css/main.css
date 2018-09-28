@@ -217,6 +217,22 @@ ul {
 
 /* ---------------- END MENU ---------------- */
 
+/* ---------------- POPOVER ---------------- */
+
+@media only screen and (max-width: 960px) {
+    .popover {
+		placement: bottom;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .popover {
+		placement: bottom;
+    }
+}
+
+/* ---------------- END POPOVER ---------------- */
+
 /* ---------------- SIDE BAR ---------------- */
 /* Set sidebar as overlay */
 .sidebar { 
