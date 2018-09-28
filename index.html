@@ -10,7 +10,8 @@
 	<meta name="keywords" content="notedu, reader, ders, not, notu, kitap, kitabı" />
 	<meta name="author" content="İren SALTALI" />
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
 	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- Font Awesome icons -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
@@ -18,7 +19,9 @@
 	<!-- styles -->
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	<!-- Jquery -->
-	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script src="js/3rdParty/jquery-3.3.1.min.js"></script>
+	<!-- Jquery UI-->
+	<!-- <script src="js/3rdParty/jquery-ui.min.js"></script> -->
 	<!-- Jquery for scrollbar -->
 	<script src="js/3rdParty/jquery.nicescroll-3.7.6/jquery.nicescroll.min.js"></script>
 	<script src="js/main.js"></script>
@@ -31,17 +34,23 @@
 		<div class="menu" id="menu">
 			<div class="menu__border">
 				<!-- Summary/Head of Menu -->
-				<div class="menu__summary">
+				<div class="menu__header">
 					<!-- Close Button -->
-					<a href="#" class="closebtn" onclick="closeMenu()"><i class="fa fa-2x fa-times"></i></a>
-					<!-- Image -->
-					<img id="cover" src="">
+					<a class="closebtn" onclick="closeMenu()"><i class="fa fa-2x fa-times"></i></a>
+				</div>
+				<!-- Head of Menu -->
+				<div class="menu__summary">
+					<div class="">
+						<!-- Image -->
+						<img id="cover" src="img/cover.jpg">
+					</div>
 					<!-- Summary of the book -->
-					<div class="summary">
+					<div class="">
+						<h4>Kitap Adı</h4>
+						<h6>Yazar - Yayın Evi</h6>
+
 						<p>
-							Some summary of the book
-							And another one
-							And another one DJ KHALED
+							Some summary of the book And another one And another one DJ KHALED
 						</p>
 					</div>
 				</div>
@@ -49,76 +58,132 @@
 				<div class="menu__content">
 					<ul class="nav nav-tabs" id="myTab" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link active" id="chapters-tab" data-toggle="tab" href="#chapters" role="tab" aria-controls="home" aria-selected="true">Chapters</a>
+							<a class="nav-link active" id="chapters-tab" data-toggle="tab" href="#chapters" role="tab" aria-controls="home"
+							 aria-selected="true">Chapters</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="bookmarks-tab" data-toggle="tab" href="#bookmarks" role="tab" aria-controls="profile" aria-selected="false">Bookmarks</a>
+							<a class="nav-link" id="bookmarks-tab" data-toggle="tab" href="#bookmarks" role="tab" aria-controls="profile"
+							 aria-selected="false">Bookmarks</a>
 						</li>
 					</ul>
 				</div>
 				<!-- Tab Contents -->
 				<div class="tab-content" id="menuTabs">
 					<!-- Tab Content 1 -->
-					<div class="tab-pane fade show active" id="chapters" role="tabpanel" aria-labelledby="chapters-tab">Some Chapters contenttrices
-						sagittis, sapien ipsum ornare odio, nec blandit nisi leo et tellus. Nullam varius nulla ut neque aliquet volutpat.
-						Nulla facilisi. Vivamus suscipit mauris nisl, ut posuere mi ultrices in. Cras et tortor sit amet sem suscipit bibendum
-						at quis nunc. Nam auctor libero quis suscipit fringilla. Sed nunc odio, tincidunt ac egestas vitae, bibendum vel ex.
-						Etiam at enim felis. Suspendisse feugiat cursus quam. Suspendisse potenti. Curabitur interdum tristique felis, ac vehicula
-						ante convallis vel. Quisque eu est dignissim, tincidunt nunc volutpat, viverra dolor. Suspendisse mattis neque elit,
-						in consectetur eros pellentesque eget. Donec consequat imperdiet nisl, eu laoreet leo scelerisque ut. Donec rutrum
-						mattis massa laoreet molestie. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-						Nam vitae nibh semper, dapibus arcu eget, porta ex. Nulla scelerisque rutrum ex vitae fringilla. Proin et tortor at
-						dui rhoncus a I WANT TO SEE THIS lots by lots</div>
-						<!-- Tab Content 2 -->
-					<div class="tab-pane fade" id="bookmarks" role="tabpanel" aria-labelledby="bookmarks-tab">Some other Bookmarks content
-						little by little</div>
+					<div class="tab-pane fade show active chapters" id="chapters" role="tabpanel" aria-labelledby="chapters-tab">
+						<ol>
+							<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+							<ul class="level1">
+								<li>Aliquam tincidunt mauris eu risus.</li>
+								<li>Vestibulum auctor dapibus neque.</li>
+								<ul class="level2">
+									<li>Aliquam tincidunt mauris eu risus.</li>
+									<li>Vestibulum auctor dapibus neque.</li>
+								</ul>
+							</ul>
+							<li>Nunc dignissim risus id metus.</li>
+							<li>Cras ornare tristique elit.</li>
+							<li>Vivamus vestibulum ntulla nec ante.</li>
+							<li>Praesent placerat risus quis eros.</li>
+							<li>Fusce pellentesque suscipit nibh.</li>
+							<li>Integer vitae libero ac risus egestas placerat.</li>
+							<li>Vestibulum commodo felis quis tortor.</li>
+							<li>Ut aliquam sollicitudin leo.</li>
+							<li>Cras iaculis ultricies nulla.</li>
+							<li>Donec quis dui at dolor tempor interdum.</li>
+						</ol>
+					</div>
+					<!-- Tab Content 2 -->
+					<div class="tab-pane fade bookmarks" id="bookmarks" role="tabpanel" aria-labelledby="bookmarks-tab">
+						<ul>
+							<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+							<li>Aliquam tincidunt mauris eu risus.</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
 		<!-- Side bar -->
 		<div class="col-sm-2 col-md-1 sidebar" id="sidebar">
-				
+
 			<div class="sidebar__content">
 				<ul>
-					<a class="sidebar__link" href="#" id="menu-button"><li class="nav__btn fa fa-bars fa-2x" onclick="openMenu()"></li></a>
-					<a class="sidebar__link" href="#" data-html="" id="font-settings" data-toggle="popover" ><li class="nav__btn fa fa-font fa-2x" ></li></a>
-					<a class="sidebar__link" href="#" id="reader-settings"><li class="nav__btn fa fa-text-height fa-2x"></li></a>
-					<a class="sidebar__link" href="#" id="bookmark"><li class="nav__btn fa fa-bookmark fa-2x"></li></a>
+					<a class="sidebar__link" id="menu-button" onclick="openMenu()">
+						<li class="nav__btn  fas fa-bars fa-2x"></li>
+					</a>
+					<a class="sidebar__link" href="#" data-html="" id="font-settings" data-toggle="popover" style="display:in;">
+						<li class="nav__btn fas"><span class="fa-font fa-2x"></span><span class="fa-font"></span></li>
+					</a>
+					<a class="sidebar__link" href="#" id="reader-settings">
+						<li class="nav__btn fas fa-glasses fa-2x"></li>
+					</a>
+					<a class="sidebar__link" onclick="bookmark()" href="#" id="bookmark" data-toggle="tooltip" data-placement="left" title="Kaydedildi">
+						<li class="nav__btn fas fa-bookmark fa-2x"></li>
+					</a>
 				</ul>
 			</div>
 		</div>
 		<!-- Main text block -->
-		<div class="main col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1">
+		<div class="main col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
 			<div class="main__wrap">
-				<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis velit in massa aliquam, vel hendrerit
-					velit scelerisque. Fusce suscipit, urna vitae commodo convallis, lorem sapien tristique metus, non sagittis est lorem
-					at magna. Phasellus scelerisque efficitur justo. Quisque fringilla, felis ac ultrices sagittis, sapien ipsum ornare
-					odio, nec blandit nisi leo et tellus. Nullam varius nulla ut neque aliquet volutpat. Nulla facilisi. Vivamus suscipit
-					mauris nisl, ut posuere mi ultrices in. Cras et tortor sit amet sem suscipit bibendum at quis nunc. Nam auctor libero
-					quis suscipit fringilla. Sed nunc odio, tincidunt ac egestas vitae, bibendum vel ex. Etiam at enim felis. Suspendisse
-					feugiat cursus quam. Suspendisse potenti. Curabitur interdum tristique felis, ac vehicula ante convallis vel. Quisque
-					eu est dignissim, tincidunt nunc volutpat, viverra dolor. Suspendisse mattis neque elit, in consectetur eros pellentesque
-					eget. Donec consequat imperdiet nisl, eu laoreet leo scelerisque ut. Donec rutrum mattis massa laoreet molestie. Orci
-					varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam vitae nibh semper, dapibus arcu
-					eget, porta ex. Nulla scelerisque rutrum ex vitae fringilla. Proin et tortor at dui rhoncus aliquam a sed risus. Sed
-					viverra massa est, nec vehicula felis accumsan a. Mauris non magna enim. Nam eu felis quis nisl facilisis eleifend.
-					Donec quam lacus, convallis quis leo eu, bibendum iaculis magna. Sed ac tristique tortor. Cras placerat, mi id aliquet
-					sollicitudin, augue turpis imperdiet ex, a luctus nisl arcu eget sem. Sed convallis nulla ut justo laoreet interdum.
-					Nam vitae porta lorem. Vivamus interdum pulvinar fermentum. <br/><br/><br/> Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Pellentesque iaculis velit in massa aliquam, vel hendrerit velit scelerisque. Fusce suscipit, urna
-					vitae commodo convallis, lorem sapien tristique metus, non sagittis est lorem at magna. Phasellus scelerisque efficitur
-					justo. Quisque fringilla, felis ac ultrices sagittis, sapien ipsum ornare odio, nec blandit nisi leo et tellus. Nullam
-					varius nulla ut neque aliquet volutpat. Nulla facilisi. Vivamus suscipit mauris nisl, ut posuere mi ultrices in. <br/><br/><br/>					Cras
-					et tortor sit amet sem suscipit bibendum at quis nunc. Nam auctor libero quis suscipit fringilla. Sed nunc odio, tincidunt
-					ac egestas vitae, bibendum vel ex. Etiam at enim felis. Suspendisse feugiat cursus quam. Suspendisse potenti. Curabitur
-					interdum tristique felis, ac vehicula ante convallis vel. Quisque eu est dignissim, tincidunt nunc volutpat, viverra
-					dolor. <br/><br/><br/> Suspendisse mattis neque elit, in consectetur eros pellentesque eget. Donec consequat imperdiet
-					nisl, eu laoreet leo scelerisque ut. Donec rutrum mattis massa laoreet molestie. Orci varius natoque penatibus et magnis
-					dis parturient montes, nascetur ridiculus mus. Nam vitae nibh semper, dapibus arcu eget, porta ex. Nulla scelerisque
-					rutrum ex vitae fringilla. Proin et tortor at dui rhoncus aliquam a sed risus. Sed viverra massa est, nec vehicula felis
-					accumsan a. Mauris non magna enim. Nam eu felis quis nisl facilisis eleifend. Donec quam lacus, convallis quis leo eu,
-					bibendum iaculis magna. Sed ac tristique tortor. Cras placerat, mi id aliquet sollicitudin, augue turpis imperdiet ex,
-					a luctus nisl arcu eget sem. Sed convallis nulla ut justo laoreet interdum. Nam vitae porta lorem. Vivamus interdum
+				<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis velit in massa aliquam, vel
+					hendrerit
+					velit scelerisque. Fusce suscipit, urna vitae commodo convallis, lorem sapien tristique metus, non sagittis est
+					lorem
+					at magna. Phasellus scelerisque efficitur justo. Quisque fringilla, felis ac ultrices sagittis, sapien ipsum
+					ornare
+					odio, nec blandit nisi leo et tellus. Nullam varius nulla ut neque aliquet volutpat. Nulla facilisi. Vivamus
+					suscipit
+					mauris nisl, ut posuere mi ultrices in. Cras et tortor sit amet sem suscipit bibendum at quis nunc. Nam auctor
+					libero
+					quis suscipit fringilla. Sed nunc odio, tincidunt ac egestas vitae, bibendum vel ex. Etiam at enim felis.
+					Suspendisse
+					feugiat cursus quam. Suspendisse potenti. Curabitur interdum tristique felis, ac vehicula ante convallis vel.
+					Quisque
+					eu est dignissim, tincidunt nunc volutpat, viverra dolor. Suspendisse mattis neque elit, in consectetur eros
+					pellentesque
+					eget. Donec consequat imperdiet nisl, eu laoreet leo scelerisque ut. Donec rutrum mattis massa laoreet molestie.
+					Orci
+					varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam vitae nibh semper, dapibus
+					arcu
+					eget, porta ex. Nulla scelerisque rutrum ex vitae fringilla. Proin et tortor at dui rhoncus aliquam a sed risus.
+					Sed
+					viverra massa est, nec vehicula felis accumsan a. Mauris non magna enim. Nam eu felis quis nisl facilisis
+					eleifend.
+					Donec quam lacus, convallis quis leo eu, bibendum iaculis magna. Sed ac tristique tortor. Cras placerat, mi id
+					aliquet
+					sollicitudin, augue turpis imperdiet ex, a luctus nisl arcu eget sem. Sed convallis nulla ut justo laoreet
+					interdum.
+					Nam vitae porta lorem. Vivamus interdum pulvinar fermentum. <br /><br /><br /> Lorem ipsum dolor sit amet,
+					consectetur
+					adipiscing elit. Pellentesque iaculis velit in massa aliquam, vel hendrerit velit scelerisque. Fusce suscipit,
+					urna
+					vitae commodo convallis, lorem sapien tristique metus, non sagittis est lorem at magna. Phasellus scelerisque
+					efficitur
+					justo. Quisque fringilla, felis ac ultrices sagittis, sapien ipsum ornare odio, nec blandit nisi leo et tellus.
+					Nullam
+					varius nulla ut neque aliquet volutpat. Nulla facilisi. Vivamus suscipit mauris nisl, ut posuere mi ultrices in.
+					<br /><br /><br /> Cras
+					et tortor sit amet sem suscipit bibendum at quis nunc. Nam auctor libero quis suscipit fringilla. Sed nunc odio,
+					tincidunt
+					ac egestas vitae, bibendum vel ex. Etiam at enim felis. Suspendisse feugiat cursus quam. Suspendisse potenti.
+					Curabitur
+					interdum tristique felis, ac vehicula ante convallis vel. Quisque eu est dignissim, tincidunt nunc volutpat,
+					viverra
+					dolor. <br /><br /><br /> Suspendisse mattis neque elit, in consectetur eros pellentesque eget. Donec consequat
+					imperdiet
+					nisl, eu laoreet leo scelerisque ut. Donec rutrum mattis massa laoreet molestie. Orci varius natoque penatibus et
+					magnis
+					dis parturient montes, nascetur ridiculus mus. Nam vitae nibh semper, dapibus arcu eget, porta ex. Nulla
+					scelerisque
+					rutrum ex vitae fringilla. Proin et tortor at dui rhoncus aliquam a sed risus. Sed viverra massa est, nec vehicula
+					felis
+					accumsan a. Mauris non magna enim. Nam eu felis quis nisl facilisis eleifend. Donec quam lacus, convallis quis leo
+					eu,
+					bibendum iaculis magna. Sed ac tristique tortor. Cras placerat, mi id aliquet sollicitudin, augue turpis imperdiet
+					ex,
+					a luctus nisl arcu eget sem. Sed convallis nulla ut justo laoreet interdum. Nam vitae porta lorem. Vivamus
+					interdum
 					pulvinar fermentum.
 				</div>
 			</div>
@@ -127,8 +192,10 @@
 	<!-- /view -->
 
 	<!-- Required scripts for Bootstrap -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
 </body>
 
 </html>
