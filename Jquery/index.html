@@ -24,10 +24,11 @@
 	<!-- <script src="js/3rdParty/jquery-ui.min.js"></script> -->
 	<!-- Jquery for scrollbar -->
 	<script src="js/3rdParty/jquery.nicescroll-3.7.6/jquery.nicescroll.min.js"></script>
+	<script src="js/3rdParty/TextHighlighter.min.js"></script>
 	<script src="js/main.js"></script>
 </head>
 
-<body onresize="checkMenu()">
+<body onresize="CheckMenu()">
 	<!-- Main container -->
 	<div class="container">
 		<!-- Menu bar  -->
@@ -36,7 +37,7 @@
 				<!-- Summary/Head of Menu -->
 				<div class="menu__header">
 					<!-- Close Button -->
-					<a class="closebtn" onclick="closeMenu()"><i class="fa fa-2x fa-times"></i></a>
+					<a class="closebtn" onclick="CloseMenu()"><i class="fa fa-2x fa-times"></i></a>
 				</div>
 				<!-- Head of Menu -->
 				<div class="menu__summary">
@@ -104,11 +105,11 @@
 			</div>
 		</div>
 		<!-- Side bar -->
-		<div class="col-sm-2 col-md-1 sidebar" id="sidebar">
+		<div class="col-sm-2 col-md-1 sidebar white" id="sidebar">
 
 			<div class="sidebar__content">
 				<ul>
-					<a class="sidebar__link" id="menu-button" onclick="openMenu()">
+					<a class="sidebar__link" id="menu-button" onclick="OpenMenu()">
 						<li class="nav__btn  fas fa-bars fa-2x"></li>
 					</a>
 					<a class="sidebar__link" href="#" data-html="" id="font-settings" data-toggle="popover" style="display:in;">
@@ -117,7 +118,8 @@
 					<a class="sidebar__link" href="#" id="reader-settings">
 						<li class="nav__btn fas fa-glasses fa-2x"></li>
 					</a>
-					<a class="sidebar__link" onclick="bookmark()" href="#" id="bookmark" data-toggle="tooltip" data-placement="left" title="Kaydedildi">
+					<a class="sidebar__link" onclick="Bookmark()" href="#" id="bookmark" data-toggle="tooltip" data-placement="left"
+					 title="Kaydedildi">
 						<li class="nav__btn fas fa-bookmark fa-2x"></li>
 					</a>
 				</ul>
@@ -125,67 +127,66 @@
 		</div>
 		<!-- Main text block -->
 		<div class="main col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
-			<div class="main__wrap">
-				<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis velit in massa aliquam, vel
-					hendrerit
-					velit scelerisque. Fusce suscipit, urna vitae commodo convallis, lorem sapien tristique metus, non sagittis est
-					lorem
-					at magna. Phasellus scelerisque efficitur justo. Quisque fringilla, felis ac ultrices sagittis, sapien ipsum
-					ornare
-					odio, nec blandit nisi leo et tellus. Nullam varius nulla ut neque aliquet volutpat. Nulla facilisi. Vivamus
-					suscipit
-					mauris nisl, ut posuere mi ultrices in. Cras et tortor sit amet sem suscipit bibendum at quis nunc. Nam auctor
-					libero
-					quis suscipit fringilla. Sed nunc odio, tincidunt ac egestas vitae, bibendum vel ex. Etiam at enim felis.
-					Suspendisse
-					feugiat cursus quam. Suspendisse potenti. Curabitur interdum tristique felis, ac vehicula ante convallis vel.
-					Quisque
-					eu est dignissim, tincidunt nunc volutpat, viverra dolor. Suspendisse mattis neque elit, in consectetur eros
-					pellentesque
-					eget. Donec consequat imperdiet nisl, eu laoreet leo scelerisque ut. Donec rutrum mattis massa laoreet molestie.
-					Orci
-					varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam vitae nibh semper, dapibus
-					arcu
-					eget, porta ex. Nulla scelerisque rutrum ex vitae fringilla. Proin et tortor at dui rhoncus aliquam a sed risus.
-					Sed
-					viverra massa est, nec vehicula felis accumsan a. Mauris non magna enim. Nam eu felis quis nisl facilisis
-					eleifend.
-					Donec quam lacus, convallis quis leo eu, bibendum iaculis magna. Sed ac tristique tortor. Cras placerat, mi id
-					aliquet
-					sollicitudin, augue turpis imperdiet ex, a luctus nisl arcu eget sem. Sed convallis nulla ut justo laoreet
-					interdum.
-					Nam vitae porta lorem. Vivamus interdum pulvinar fermentum. <br /><br /><br /> Lorem ipsum dolor sit amet,
-					consectetur
-					adipiscing elit. Pellentesque iaculis velit in massa aliquam, vel hendrerit velit scelerisque. Fusce suscipit,
-					urna
-					vitae commodo convallis, lorem sapien tristique metus, non sagittis est lorem at magna. Phasellus scelerisque
-					efficitur
-					justo. Quisque fringilla, felis ac ultrices sagittis, sapien ipsum ornare odio, nec blandit nisi leo et tellus.
-					Nullam
-					varius nulla ut neque aliquet volutpat. Nulla facilisi. Vivamus suscipit mauris nisl, ut posuere mi ultrices in.
-					<br /><br /><br /> Cras
-					et tortor sit amet sem suscipit bibendum at quis nunc. Nam auctor libero quis suscipit fringilla. Sed nunc odio,
-					tincidunt
-					ac egestas vitae, bibendum vel ex. Etiam at enim felis. Suspendisse feugiat cursus quam. Suspendisse potenti.
-					Curabitur
-					interdum tristique felis, ac vehicula ante convallis vel. Quisque eu est dignissim, tincidunt nunc volutpat,
-					viverra
-					dolor. <br /><br /><br /> Suspendisse mattis neque elit, in consectetur eros pellentesque eget. Donec consequat
-					imperdiet
-					nisl, eu laoreet leo scelerisque ut. Donec rutrum mattis massa laoreet molestie. Orci varius natoque penatibus et
-					magnis
-					dis parturient montes, nascetur ridiculus mus. Nam vitae nibh semper, dapibus arcu eget, porta ex. Nulla
-					scelerisque
-					rutrum ex vitae fringilla. Proin et tortor at dui rhoncus aliquam a sed risus. Sed viverra massa est, nec vehicula
-					felis
-					accumsan a. Mauris non magna enim. Nam eu felis quis nisl facilisis eleifend. Donec quam lacus, convallis quis leo
-					eu,
-					bibendum iaculis magna. Sed ac tristique tortor. Cras placerat, mi id aliquet sollicitudin, augue turpis imperdiet
-					ex,
-					a luctus nisl arcu eget sem. Sed convallis nulla ut justo laoreet interdum. Nam vitae porta lorem. Vivamus
-					interdum
-					pulvinar fermentum.
-				</div>
+			<div class="main__wrap" id="page">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis velit in massa aliquam, vel
+				hendrerit
+				velit scelerisque. Fusce suscipit, urna vitae commodo convallis, lorem sapien tristique metus, non sagittis est
+				lorem
+				at magna. Phasellus scelerisque efficitur justo. Quisque fringilla, felis ac ultrices sagittis, sapien ipsum
+				ornare
+				odio, nec blandit nisi leo et tellus. Nullam varius nulla ut neque aliquet volutpat. Nulla facilisi. Vivamus
+				suscipit
+				mauris nisl, ut posuere mi ultrices in. Cras et tortor sit amet sem suscipit bibendum at quis nunc. Nam auctor
+				libero
+				quis suscipit fringilla. Sed nunc odio, tincidunt ac egestas vitae, bibendum vel ex. Etiam at enim felis.
+				Suspendisse
+				feugiat cursus quam. Suspendisse potenti. Curabitur interdum tristique felis, ac vehicula ante convallis vel.
+				Quisque
+				eu est dignissim, tincidunt nunc volutpat, viverra dolor. Suspendisse mattis neque elit, in consectetur eros
+				pellentesque
+				eget. Donec consequat imperdiet nisl, eu laoreet leo scelerisque ut. Donec rutrum mattis massa laoreet molestie.
+				Orci
+				varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam vitae nibh semper, dapibus
+				arcu
+				eget, porta ex. Nulla scelerisque rutrum ex vitae fringilla. Proin et tortor at dui rhoncus aliquam a sed risus.
+				Sed
+				viverra massa est, nec vehicula felis accumsan a. Mauris non magna enim. Nam eu felis quis nisl facilisis
+				eleifend.
+				Donec quam lacus, convallis quis leo eu, bibendum iaculis magna. Sed ac tristique tortor. Cras placerat, mi id
+				aliquet
+				sollicitudin, augue turpis imperdiet ex, a luctus nisl arcu eget sem. Sed convallis nulla ut justo laoreet
+				interdum.
+				Nam vitae porta lorem. Vivamus interdum pulvinar fermentum. <br /><br /><br /> Lorem ipsum dolor sit amet,
+				consectetur
+				adipiscing elit. Pellentesque iaculis velit in massa aliquam, vel hendrerit velit scelerisque. Fusce suscipit,
+				urna
+				vitae commodo convallis, lorem sapien tristique metus, non sagittis est lorem at magna. Phasellus scelerisque
+				efficitur
+				justo. Quisque fringilla, felis ac ultrices sagittis, sapien ipsum ornare odio, nec blandit nisi leo et tellus.
+				Nullam
+				varius nulla ut neque aliquet volutpat. Nulla facilisi. Vivamus suscipit mauris nisl, ut posuere mi ultrices in.
+				<br /><br /><br /> Cras
+				et tortor sit amet sem suscipit bibendum at quis nunc. Nam auctor libero quis suscipit fringilla. Sed nunc odio,
+				tincidunt
+				ac egestas vitae, bibendum vel ex. Etiam at enim felis. Suspendisse feugiat cursus quam. Suspendisse potenti.
+				Curabitur
+				interdum tristique felis, ac vehicula ante convallis vel. Quisque eu est dignissim, tincidunt nunc volutpat,
+				viverra
+				dolor. <br /><br /><br /> Suspendisse mattis neque elit, in consectetur eros pellentesque eget. Donec consequat
+				imperdiet
+				nisl, eu laoreet leo scelerisque ut. Donec rutrum mattis massa laoreet molestie. Orci varius natoque penatibus et
+				magnis
+				dis parturient montes, nascetur ridiculus mus. Nam vitae nibh semper, dapibus arcu eget, porta ex. Nulla
+				scelerisque
+				rutrum ex vitae fringilla. Proin et tortor at dui rhoncus aliquam a sed risus. Sed viverra massa est, nec vehicula
+				felis
+				accumsan a. Mauris non magna enim. Nam eu felis quis nisl facilisis eleifend. Donec quam lacus, convallis quis leo
+				eu,
+				bibendum iaculis magna. Sed ac tristique tortor. Cras placerat, mi id aliquet sollicitudin, augue turpis imperdiet
+				ex,
+				a luctus nisl arcu eget sem. Sed convallis nulla ut justo laoreet interdum. Nam vitae porta lorem. Vivamus
+				interdum
+				pulvinar fermentum.
 			</div>
 		</div>
 	</div>
@@ -196,6 +197,7 @@
 	 crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	 crossorigin="anonymous"></script>
+	<script src="js/3rdParty/showdown.min.js"></script>
 </body>
 
 </html>
