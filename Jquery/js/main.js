@@ -71,33 +71,24 @@ $(window).on('load', function (e) {
     ChangeReaderPageColor(getCookie("readerColor"));
     ChangeFont(getCookie("fontFamily"));
     ChangeFontSize(getCookie("fontSize"));
+    GetPage(getCookie("currentPage"));
 })
 
 //Document ready processes
 $(document).ready(function () {
-    //Get first markdown page
-    // $.get('dummy/markdown/page1.md', function (data) {
-    //     var converter = new showdown.Converter();
-    //     html = converter.makeHtml(data);
-    //     $("#page").html(html);
-    // }, 'text');
-
-
 
     //Text Highlighter
-    var hltr = new TextHighlighter(document.getElementById('page'), {
+    var hltr = new TextHighlighter(document.getElementById('readingPage'), {
         onBeforeHighlight: function (range) {
-            var response = hltr.isHighlight(this.el);
+            // var response = hltr.isHighlight(this.el);
 
-            console.log(this.el);
-            console.log(response);
+            // console.log(this.el);
+            // console.log(response);
+            console.log("response");
             return true;
         },
         onAfterHighlight: function (range, highlights) {
-            // window.alert('Created ' + highlights.length + ' highlight(s): ' + highlights.map(function (h) {
-            //     return '"' + h.innerText + '"';
-            // }).join(', '));
-            console.log("response");
+
             return true;
         },
         onRemoveHighlight: function (hl) {
@@ -114,9 +105,7 @@ $(document).ready(function () {
         cursorwidth: "7px", // cursor width in pixel (you can also write "5px")
         cursorborder: "0px solid #fff", // css definition for cursor border
         cursorborderradius: "3px", // border radius in pixel for cursor
-        autohidemode: true, // how hide the scrollbar works, possible values: 
-        //background:"grey",
-
+        autohidemode: true // how hide the scrollbar works, possible values: 
     });
 
     // Scrollbar for menu tabs
@@ -136,11 +125,13 @@ $(document).ready(function () {
 
 
     //Prevent Right Click
-    // $("body").on("contextmenu", function () {
-    //     return false;
-    // });
+    $("body").on("contextmenu", function () {
+        return false;
+    });
 
 });
+
+
 
 
 //Prevent shortcuts
@@ -150,7 +141,7 @@ $(document).keydown(function (e) {
         ctrlIsDown = true;
     }
     else if (ctrlIsDown) {
-        //e.preventDefault();
+        e.preventDefault();
     }
 });
 $(document).keyup(function (e) {
@@ -271,6 +262,26 @@ function Bookmark() {
     setTimeout(function () { $('#bookmark').tooltip('hide'); }, 750);
 }
 
+//Get Page
+$("#chapters li").click(function () {
+    GetPage($(this).data("page"));
+});
+$("#bookmarks li").click(function () {
+    GetPage($(this).data("page"));
+});
+function GetPage(pageNumber) {
+    if (pageNumber == "" && pageNumber >= 0)
+        pageNumber = 1;
+
+    $.get('dummy/markdown/page' + pageNumber + '.md', function (data) {
+        var converter = new showdown.Converter();
+        html = converter.makeHtml(data);
+        $("#readingPage").html(html);
+    }, 'text');
+    setCookie("currentPage", pageNumber, 30);
+}
+
+//Cookies
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));

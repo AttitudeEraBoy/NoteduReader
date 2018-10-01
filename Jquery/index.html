@@ -9,6 +9,16 @@
 	<meta name="description" content="This is the design of Notedu Reader" />
 	<meta name="keywords" content="notedu, reader, ders, not, notu, kitap, kitabı" />
 	<meta name="author" content="İren SALTALI" />
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-PVJCV3X');</script>
+	<!-- End Google Tag Manager -->
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	 crossorigin="anonymous">
@@ -18,17 +28,13 @@
 	 crossorigin="anonymous">
 	<!-- styles -->
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<!-- Jquery -->
-	<script src="js/3rdParty/jquery-3.3.1.min.js"></script>
-	<!-- Jquery UI-->
-	<!-- <script src="js/3rdParty/jquery-ui.min.js"></script> -->
-	<!-- Jquery for scrollbar -->
-	<script src="js/3rdParty/jquery.nicescroll-3.7.6/jquery.nicescroll.min.js"></script>
-	<script src="js/3rdParty/TextHighlighter.min.js"></script>
-	<script src="js/main.js"></script>
+
 </head>
 
 <body onresize="CheckMenu()">
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVJCV3X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 	<!-- Main container -->
 	<div class="container">
 		<!-- Menu bar  -->
@@ -73,32 +79,31 @@
 					<!-- Tab Content 1 -->
 					<div class="tab-pane fade show active chapters" id="chapters" role="tabpanel" aria-labelledby="chapters-tab">
 						<ol>
-							<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+							<li data-page=1>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
 							<ul class="level1">
-								<li>Aliquam tincidunt mauris eu risus.</li>
-								<li>Vestibulum auctor dapibus neque.</li>
+								<li data-page=1>Aliquam tincidunt mauris eu risus.</li>
+								<li data-page=1>Vestibulum auctor dapibus neque.</li>
 								<ul class="level2">
-									<li>Aliquam tincidunt mauris eu risus.</li>
-									<li>Vestibulum auctor dapibus neque.</li>
+									<li data-page=1>Aliquam tincidunt mauris eu risus.</li>
+									<li data-page=1>Vestibulum auctor dapibus neque.</li>
 								</ul>
 							</ul>
-							<li>Nunc dignissim risus id metus.</li>
-							<li>Cras ornare tristique elit.</li>
-							<li>Vivamus vestibulum ntulla nec ante.</li>
-							<li>Praesent placerat risus quis eros.</li>
-							<li>Fusce pellentesque suscipit nibh.</li>
-							<li>Integer vitae libero ac risus egestas placerat.</li>
-							<li>Vestibulum commodo felis quis tortor.</li>
-							<li>Ut aliquam sollicitudin leo.</li>
-							<li>Cras iaculis ultricies nulla.</li>
-							<li>Donec quis dui at dolor tempor interdum.</li>
+							<li data-page=2>Nunc dignissim risus id metus.</li>
+							<li data-page=3>Cras ornare tristique elit.</li>
+							<li data-page=4>Vivamus vestibulum ntulla nec ante.</li>
+							<li data-page=5>Ut aliquam sollicitudin leo.</li>
+							<li data-page=6>Praesent placerat risus quis eros.</li>
+							<li data-page=7>Fusce pellentesque suscipit nibh.</li>
+							<li data-page=8>Integer vitae libero ac risus egestas placerat.</li>
+							<li data-page=9>Vestibulum commodo felis quis tortor.</li>
+							<li data-page=10>Ut aliquam sollicitudin leo.</li>
 						</ol>
 					</div>
 					<!-- Tab Content 2 -->
 					<div class="tab-pane fade bookmarks" id="bookmarks" role="tabpanel" aria-labelledby="bookmarks-tab">
 						<ul>
-							<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-							<li>Aliquam tincidunt mauris eu risus.</li>
+							<li data-page=1>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+							<li data-page=9>Vestibulum commodo felis quis tortor.</li>
 						</ul>
 					</div>
 				</div>
@@ -127,77 +132,25 @@
 		</div>
 		<!-- Main text block -->
 		<div class="main col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
-			<div class="main__wrap" id="page">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis velit in massa aliquam, vel
-				hendrerit
-				velit scelerisque. Fusce suscipit, urna vitae commodo convallis, lorem sapien tristique metus, non sagittis est
-				lorem
-				at magna. Phasellus scelerisque efficitur justo. Quisque fringilla, felis ac ultrices sagittis, sapien ipsum
-				ornare
-				odio, nec blandit nisi leo et tellus. Nullam varius nulla ut neque aliquet volutpat. Nulla facilisi. Vivamus
-				suscipit
-				mauris nisl, ut posuere mi ultrices in. Cras et tortor sit amet sem suscipit bibendum at quis nunc. Nam auctor
-				libero
-				quis suscipit fringilla. Sed nunc odio, tincidunt ac egestas vitae, bibendum vel ex. Etiam at enim felis.
-				Suspendisse
-				feugiat cursus quam. Suspendisse potenti. Curabitur interdum tristique felis, ac vehicula ante convallis vel.
-				Quisque
-				eu est dignissim, tincidunt nunc volutpat, viverra dolor. Suspendisse mattis neque elit, in consectetur eros
-				pellentesque
-				eget. Donec consequat imperdiet nisl, eu laoreet leo scelerisque ut. Donec rutrum mattis massa laoreet molestie.
-				Orci
-				varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam vitae nibh semper, dapibus
-				arcu
-				eget, porta ex. Nulla scelerisque rutrum ex vitae fringilla. Proin et tortor at dui rhoncus aliquam a sed risus.
-				Sed
-				viverra massa est, nec vehicula felis accumsan a. Mauris non magna enim. Nam eu felis quis nisl facilisis
-				eleifend.
-				Donec quam lacus, convallis quis leo eu, bibendum iaculis magna. Sed ac tristique tortor. Cras placerat, mi id
-				aliquet
-				sollicitudin, augue turpis imperdiet ex, a luctus nisl arcu eget sem. Sed convallis nulla ut justo laoreet
-				interdum.
-				Nam vitae porta lorem. Vivamus interdum pulvinar fermentum. <br /><br /><br /> Lorem ipsum dolor sit amet,
-				consectetur
-				adipiscing elit. Pellentesque iaculis velit in massa aliquam, vel hendrerit velit scelerisque. Fusce suscipit,
-				urna
-				vitae commodo convallis, lorem sapien tristique metus, non sagittis est lorem at magna. Phasellus scelerisque
-				efficitur
-				justo. Quisque fringilla, felis ac ultrices sagittis, sapien ipsum ornare odio, nec blandit nisi leo et tellus.
-				Nullam
-				varius nulla ut neque aliquet volutpat. Nulla facilisi. Vivamus suscipit mauris nisl, ut posuere mi ultrices in.
-				<br /><br /><br /> Cras
-				et tortor sit amet sem suscipit bibendum at quis nunc. Nam auctor libero quis suscipit fringilla. Sed nunc odio,
-				tincidunt
-				ac egestas vitae, bibendum vel ex. Etiam at enim felis. Suspendisse feugiat cursus quam. Suspendisse potenti.
-				Curabitur
-				interdum tristique felis, ac vehicula ante convallis vel. Quisque eu est dignissim, tincidunt nunc volutpat,
-				viverra
-				dolor. <br /><br /><br /> Suspendisse mattis neque elit, in consectetur eros pellentesque eget. Donec consequat
-				imperdiet
-				nisl, eu laoreet leo scelerisque ut. Donec rutrum mattis massa laoreet molestie. Orci varius natoque penatibus et
-				magnis
-				dis parturient montes, nascetur ridiculus mus. Nam vitae nibh semper, dapibus arcu eget, porta ex. Nulla
-				scelerisque
-				rutrum ex vitae fringilla. Proin et tortor at dui rhoncus aliquam a sed risus. Sed viverra massa est, nec vehicula
-				felis
-				accumsan a. Mauris non magna enim. Nam eu felis quis nisl facilisis eleifend. Donec quam lacus, convallis quis leo
-				eu,
-				bibendum iaculis magna. Sed ac tristique tortor. Cras placerat, mi id aliquet sollicitudin, augue turpis imperdiet
-				ex,
-				a luctus nisl arcu eget sem. Sed convallis nulla ut justo laoreet interdum. Nam vitae porta lorem. Vivamus
-				interdum
-				pulvinar fermentum.
-			</div>
+			<p id="readingPage">
+				<h1>Sayfa yükleniyor</h1>
+			</p>
 		</div>
 	</div>
 	<!-- /view -->
+	<!-- Jquery -->
+	<script type="text/javascript" src="js/3rdParty/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/3rdParty/TextHighlighter.min.js"></script>
+	<!-- Jquery for scrollbar -->
+	<script type="text/javascript" src="js/3rdParty/jquery.nicescroll-3.7.6/jquery.nicescroll.min.js"></script>
 
+	<script type="text/javascript" src="js/3rdParty/showdown.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	<!-- Required scripts for Bootstrap -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-	 crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-	 crossorigin="anonymous"></script>
-	<script src="js/3rdParty/showdown.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+	 integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/3rdParty/bootstrap.min.js"></script>
+
 </body>
 
 </html>
